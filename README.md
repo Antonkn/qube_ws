@@ -17,14 +17,14 @@ qube_ws/
 
 Forutsetninger
 
-    Ubuntu 24.04.04 eller lignende
+    Ubuntu 24.04.04
 
     ROS 2 Jazzy (installert via sudo apt install ros-jazzy-desktop)
 
     ros-jazzy-ros2-control og ros-jazzy-ros2-controllers
     sudo apt install -y ros-jazzy-ros2-control ros-jazzy-ros2-controllers
 
-    colcon og standard ROS 2–verktøy tilgjengelig i PATH
+    colcon og standard ROS 2–verktøy
 
 Sette opp workspace
 
@@ -71,22 +71,22 @@ Dette gjør:
 
     RViz med ferdig oppsatt visnings‑layout (view.rviz)
 
-Endre setpoint live
+Endre setpoint live:
 
-ros2 param set /qube_controller setpoint 1.57
+    ros2 param set /qube_controller setpoint 1.57
 
 GUI:
-ros2 run rqt_reconfigure rqt_reconfigure
 
+    ros2 run rqt_reconfigure rqt_reconfigure
 
 Se både /velocity_controller/command og /joint_states:
 
-ros2 topic echo /velocity_controller/command
-ros2 topic echo /joint_states
+    ros2 topic echo /velocity_controller/command
+    ros2 topic echo /joint_states
 
 I RViz vil disken rotere mot det nye setpoint.
 
-Kjøre mot ekte hardware (Arduino)
+Kjøre mot en arduino
 
     Koble Arduino med Qube‑firmware på USB (f.eks. /dev/ttyACMX).
 
