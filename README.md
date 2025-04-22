@@ -49,11 +49,11 @@ source install/setup.bash
 
 Kjøre / Visualisere modellen
 
-Kun statisk modell (ingen control) ros2 launch qube_description view_qube.launch.py
+Det er kun statisk modell (ingen control) på selve visualiseringen. ros2 launch qube_description view_qube.launch.py
 
     Starter joint_state_publisher, robot_state_publisher og RViz
 
-    Visualiserer svart kube + rød disk + hvit peker i RViz
+    Visualiserer en faktisk Quanser Cube
 
 Full Bring‑up (simulert hardware + PID‑kontroll)
 
