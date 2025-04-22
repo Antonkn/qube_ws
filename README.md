@@ -4,7 +4,7 @@ Dette repository-et inneholder en komplett ROS 2‑basert pipeline for å beskri
 
 Innhold
 
-```text qube_ws/ ├── src/ │ ├── qube_driver/ # ROS 2 Control hardware plugin (mock + Arduino) │ ├── qube_description/ # URDF/Xacro-modeller for Qube │ ├── qube_bringup/ # Launch-filer og konfigurasjon │ └── qube_controller/ # PID-kontroller for velocity-styring └── README.md # Denne dokumentasjonsfilen ```
+```text ├── src/ │ ├── qube_driver/ # ROS 2 Control hardware plugin (mock + Arduino) │ ├── qube_description/ # URDF/Xacro-modeller for Qube │ ├── qube_bringup/ # Launch-filer og konfigurasjon │ └── qube_controller/ # PID-kontroller for velocity-styring └── README.md # Denne dokumentasjonsfilen ```
 
 
 Forutsetninger
