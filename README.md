@@ -1,6 +1,6 @@
 Quanser Qube ROS 2 Control Project
 
-Dette repository-et inneholder en komplett ROS 2‑basert pipeline for å beskrive, simulere og styre en Quanser Qube – med både mock‑hardware (GenericSystem) og støtte for ekte Arduino‑tilkobling via qube_driver.
+Dette repository-et inneholder en komplett ROS 2‑basert pipeline for å beskrive, simulere og styre en Quanser Qube – med både mock‑hardware (GenericSystem) og støtte for Arduino‑tilkobling via qube_driver.
 
 Innhold
 
@@ -17,7 +17,7 @@ qube_ws/
 
 Forutsetninger
 
-    Ubuntu 22.04 eller lignende
+    Ubuntu 24.04.04 eller lignende
 
     ROS 2 Jazzy (installert via sudo apt install ros-jazzy-desktop)
 
@@ -31,6 +31,7 @@ Sette opp workspace
     Opprett workspace og klon pakkene
     mkdir -p ~/qube_ws/src
     cd ~/qube_ws/src
+    eller ved bruk av third party kode programmer som VisualStudio
 
     Hent qube_driver fra GitHub
     git clone https://github.com/adamleon/qube_driver.git
@@ -40,7 +41,8 @@ Sette opp workspace
     Gå tilbake til workspace-roten
     cd ~/qube_ws
 
-Bygge
+
+Bygging:
 
 colcon build --symlink-install
 source install/setup.bash
