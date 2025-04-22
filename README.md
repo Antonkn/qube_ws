@@ -75,16 +75,20 @@ Endre setpoint live
 
 ros2 param set /qube_controller setpoint 1.57
 
+GUI:
+ros2 run rqt_reconfigure rqt_reconfigure
+
+
 Se både /velocity_controller/command og /joint_states:
 
-ros2 topic echo /velocity_controller/command -n 5
-ros2 topic echo /joint_states -n 5
+ros2 topic echo /velocity_controller/command
+ros2 topic echo /joint_states
 
 I RViz vil disken rotere mot det nye setpoint.
 
 Kjøre mot ekte hardware (Arduino)
 
-    Koble Arduino med Qube‑firmware på USB (f.eks. /dev/ttyUSB0).
+    Koble Arduino med Qube‑firmware på USB (f.eks. /dev/ttyACMX).
 
     I bringup.launch.py, sett simulation-argument til false:
     <xacro:arg name="simulation" default="false"/>
@@ -92,7 +96,7 @@ Kjøre mot ekte hardware (Arduino)
     Launch som vanlig:
     ros2 launch qube_bringup bringup.launch.py
 
-Samme PID‑node og controller‐setup brukes, men reell qube_driver/ArduinoHardware eksekverer mot Arduino.
+Samme PID‑node og controller‐setup brukes
 
 Pakkeoversikt
 
@@ -120,7 +124,7 @@ qube_bringup
 
 qube_controller
 
-    controller.py – en ROS 2‑node med P/PI(D) regulator
+    controller.py – en ROS 2‑node med PID regulator
 
     Publiserer Float64MultiArray på /velocity_controller/commands
 
