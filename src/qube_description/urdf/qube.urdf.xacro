@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="qube" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Inkluder makrodefinisjonen -->
+  <xacro:include filename="$(find qube_description)/urdf/qube.macro.xacro" />
+
+  <!-- Kall makroen -->
+  <xacro:qube />
+
+  <!-- Fiksert world-joint -->
+  <link name="world"/>
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>

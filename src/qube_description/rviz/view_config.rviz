@@ -1,0 +1,18 @@
+Panels:
+  - Class: rviz_common/Displays
+  - Class: rviz_common/Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Robot Description: robot_description
+  Name: root
+  Fixed Frame: world
+  Enabled: true
+Views:
+  Current:
+    Class: rviz_default_plugins/Orbit
+    Target Frame: world
+    Distance: 2.0
