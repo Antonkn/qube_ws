@@ -31,15 +31,15 @@ Sette opp workspace
     Opprett workspace og klon pakkene
     mkdir -p ~/qube_ws/src
     cd ~/qube_ws/src
-    eller ved bruk av third party kode programmer som VisualStudio
 
-    Hent qube_driver fra GitHub
-    git clone https://github.com/adamleon/qube_driver.git
-
-    Klon eller kopier egne pakker (qube_description, qube_bringup, qube_controller) inn i src/
+    Hent fra GitHub
+    git clone https://github.com/Antonkn/qube_ws.git
 
     Gå tilbake til workspace-roten
     cd ~/qube_ws
+
+    Source Ros2
+    source /opt/ros/jazzy/setup.bash
 
 
 Bygging:
@@ -79,9 +79,9 @@ GUI:
 
     ros2 run rqt_reconfigure rqt_reconfigure
 
-Se både /velocity_controller/command og /joint_states:
+Se både /velocity_controller/commands og /joint_states:
 
-    ros2 topic echo /velocity_controller/command
+    ros2 topic echo /velocity_controller/commands
     ros2 topic echo /joint_states
 
 I RViz vil disken rotere mot det nye setpoint.

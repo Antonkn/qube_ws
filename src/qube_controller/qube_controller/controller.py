@@ -22,9 +22,9 @@ class QubeController(Node):
             Float64MultiArray, '/velocity_controller/commands', 10)
 
         # PID‑parametre
-        self.kp = 1.0
-        self.ki = 0.0
-        self.kd = 0.0
+        self.kp = 15.0
+        self.ki = 0.2
+        self.kd = 1.0
         self._integral = 0.0
         self._prev_error = 0.0
         self._prev_time = self.get_clock().now()
@@ -54,12 +54,6 @@ class QubeController(Node):
         derivative = (error - self._prev_error) / dt
 
         cmd = self.kp * error + self.ki * self._integral + self.kd * derivative
-
-        max_vel = 1.0  # rad/s, tuning‐parameter
-        if cmd > max_vel:
-            cmd = max_vel
-        elif cmd < -max_vel:
-            cmd = -max_vel
 
         # Bygg Float64MultiArray
         ma = Float64MultiArray()
